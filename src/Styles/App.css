@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+.navbar-container {
+  background-color: rgb(113, 183, 241);
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-items {
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  width: 80px;
+  color: rgb(0, 0, 0);
+}
+a.active {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 240px;
+  height: 25px;
+  margin: 5px;
+}
+button {
+  height: 45px;
+  width: 120px;
+  background-color: dodgerblue;
+  color: white;
+  font-weight: 700;
+}

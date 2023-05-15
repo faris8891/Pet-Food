@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "Name": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "name": "faris",
+      "email": "zedkottakkal@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "salman",
+      "email": "qwe@qwe",
+      "password": "12345",
+      "id": 2
+    }
+  ]
+}
