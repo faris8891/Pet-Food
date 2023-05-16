@@ -2,8 +2,45 @@
   "products": [
     {
       "id": 1,
-      "Name": "json-server",
-      "author": "typicode"
+      "Name": "Dog-Product-01",
+      "Price": 200,
+      "Category": "Dog",
+      "Stock": true
+    },
+    {
+      "id": 2,
+      "Name": "Cat-Product-01",
+      "Price": 10,
+      "Category": "Cat",
+      "Stock": true
+    },
+    {
+      "id": 3,
+      "Name": "Cat-Product-08",
+      "Price": 150,
+      "Category": "Cat",
+      "Stock": false
+    },
+    {
+      "id": 4,
+      "Name": "Dog-Product-05",
+      "Price": 550,
+      "Category": "Dog",
+      "Stock": true
+    },
+    {
+      "id": 5,
+      "Name": "Cat-Product-10",
+      "Price": 380,
+      "Category": "Cat",
+      "Stock": true
+    },
+    {
+      "id": 6,
+      "Name": "Dog-Product-12",
+      "Price": 220,
+      "Category": "Dog",
+      "Stock": true
     }
   ],
   "users": [
@@ -11,13 +48,39 @@
       "name": "faris",
       "email": "zedkottakkal@gmail.com",
       "password": "12345",
-      "id": 1
+      "id": 1,
+      "cart": [
+        {
+          "name": "Dog-Product-01",
+          "productId": 1,
+          "quantity": 2,
+          "Price": 200
+        },
+        {
+          "name": "Cat-Product-01",
+          "productId": 2,
+          "quantity": 2,
+          "Price": 10
+        },
+        {
+          "name": "Dog-Product-12",
+          "productId": 6,
+          "quantity": 1,
+          "Price": 220
+        }
+      ]
     },
     {
       "name": "salman",
       "email": "qwe@qwe",
       "password": "12345",
       "id": 2
+    },
+    {
+      "name": "zed123",
+      "email": "zed@gmail.com",
+      "password": "12345",
+      "id": 3
     }
   ]
 }

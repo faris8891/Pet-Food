@@ -1,4 +1,4 @@
-import React from "react";
+
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 
@@ -16,6 +16,7 @@ export default function Login() {
       if (check.length == 1) {
         console.log(check[0].email);
         localStorage.setItem("userName", check[0].email);
+        localStorage.setItem("id", check[0].id);
         localStorage.setItem("Login", true);
         window.location.reload();
       } else {

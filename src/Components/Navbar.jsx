@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import Logout from "./Logout";
 
@@ -25,7 +24,16 @@ export default function Navbar() {
             </>
           )}
         </div>
-        <div>{login !== "false" && <Logout />}</div>
+        <div className="navbar-container2">
+          {login !== "false" && (
+            <>
+              <NavLink className="navbar-items" to="cart">
+                Cart
+              </NavLink>
+              <Logout />
+            </>
+          )}
+        </div>
       </div>
     </>
   );

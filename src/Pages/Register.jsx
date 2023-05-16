@@ -1,7 +1,8 @@
 import axios from "axios";
-import { Navigate } from "react-router-dom";
+import { Navigate,useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate=useNavigate()
   const login = localStorage.getItem("Login");
   function submitHandler() {
     event.preventDefault();
@@ -13,7 +14,8 @@ export default function Register() {
         return user.email == e.email;
       });
       if (check.length == 0) {
-        axios.post("http://localhost:3000/users", user);
+        axios.put("http://localhost:3000/users", user);
+        navigate('/login')
       } else {
         alert("Email already exist");
       }
