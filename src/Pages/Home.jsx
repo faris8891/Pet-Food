@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
+import useAddCart from "../Helpers/useAddCart";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("Cat");
+  const [eventHandler] = useAddCart();
   useEffect(() => {
     axios.get("http://localhost:3000/products").then((e) => {
       setProducts(e.data);
@@ -19,16 +21,24 @@ export default function Home() {
 
   return (
     <>
-      <h1>Home</h1>
-      <select onChange={CategoryHandler} name="Category">
+      <div className="category-container">
+      <select
+        className="category-select"
+        onChange={CategoryHandler}
+        name="Category"
+      >
         <option value="Cat">Cat</option>
         <option value="Dog">Dog</option>
-      </select>
+        </select>
+        </div>
+
       <div className="main-container">
         {products.map((e) => {
           return (
             <>
-              {e.Stock && e.Category == category && <ProductCard product={e} />}
+              {e.Stock && e.Category == category && (
+                <ProductCard product={e} eventHandler={eventHandler} />
+              )}
             </>
           );
         })}

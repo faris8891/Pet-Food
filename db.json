@@ -53,20 +53,14 @@
         {
           "Name": "Dog-Product-01",
           "productId": 1,
-          "quantity": 2,
+          "quantity": 3,
           "Price": 200
         },
         {
-          "Name": "Cat-Product-10",
-          "productId": 5,
-          "quantity": 5,
-          "Price": 380
-        },
-        {
-          "Name": "Dog-Product-05",
-          "productId": 4,
-          "quantity": 5,
-          "Price": 550
+          "Name": "Cat-Product-01",
+          "productId": 2,
+          "quantity": 1,
+          "Price": 10
         }
       ]
     },

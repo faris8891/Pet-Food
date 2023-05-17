@@ -1,17 +1,18 @@
 import { NavLink } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Logout from "./Logout";
 import axios from "axios";
 import UserProfile from "./UserProfile";
 
 export default function Navbar() {
-  const [user, setUser] = useState({cart:['']});
+  const [user, setUser] = useState({ cart: [""] });
   const login = localStorage.getItem("Login");
   const userId = localStorage.getItem("id");
   useEffect(() => {
-    axios.get(`http://localhost:3000/users/${userId}`)
-    .then((e) => setUser(e.data));
-  },[])
+    axios
+      .get(`http://localhost:3000/users/${userId}`)
+      .then((e) => setUser(e.data));
+  }, [user]);
 
   return (
     <>
@@ -37,9 +38,9 @@ export default function Navbar() {
         <div className="navbar-container2">
           {login !== "false" && (
             <>
-              <UserProfile userName={user.name } />
+              <UserProfile userName={user.name} />
               <NavLink className="navbar-items" to="cart">
-                Cart <span>{ user.cart.length}</span>
+                Cart <span>{user.cart.length}</span>
               </NavLink>
               <Logout />
             </>
