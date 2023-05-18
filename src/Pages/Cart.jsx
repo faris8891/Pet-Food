@@ -35,11 +35,12 @@ export default function Cart() {
         <div className="main-container">
           {cartItems.map((e) => {
             return (
-              <>
-                <div key={e.id} className="product-card-container ">
-                  <CartCard product={e} />
-                </div>
-              </>
+              <div
+                key={Math.floor(Math.random() * 100)}
+                className="product-card-container "
+              >
+                <CartCard product={e} />
+              </div>
             );
           })}
         </div>

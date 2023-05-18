@@ -35,11 +35,11 @@ export default function Home() {
       <div className="main-container">
         {products.map((e) => {
           return (
-            <>
+            <div key={Math.floor(Math.random() * 100000)}>
               {e.Stock && e.Category == category && (
                 <ProductCard product={e} eventHandler={eventHandler} />
               )}
-            </>
+            </div>
           );
         })}
       </div>

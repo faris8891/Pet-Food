@@ -53,7 +53,6 @@ button {
   cursor: pointer;
 }
 button:hover{
-  border: solid 3px rgb(37, 112, 187) ;
   background-color: rgb(56, 165, 255);
 }
 
@@ -111,5 +110,3 @@ font-size: large;
   justify-content: center;
   align-items: center;
 }
-
-

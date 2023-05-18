@@ -53,7 +53,7 @@
         {
           "Name": "Dog-Product-01",
           "productId": 1,
-          "quantity": 3,
+          "quantity": 4,
           "Price": 200
         },
         {
@@ -61,6 +61,18 @@
           "productId": 2,
           "quantity": 1,
           "Price": 10
+        },
+        {
+          "Name": "Dog-Product-05",
+          "productId": 4,
+          "quantity": 1,
+          "Price": 550
+        },
+        {
+          "Name": "Dog-Product-12",
+          "productId": 6,
+          "quantity": 1,
+          "Price": 220
         }
       ]
     },
@@ -68,13 +80,15 @@
       "name": "salman",
       "email": "qwe@qwe",
       "password": "12345",
-      "id": 2
+      "id": 2,
+      "cart": []
     },
     {
       "name": "zed123",
       "email": "zed@gmail.com",
       "password": "12345",
-      "id": 3
+      "id": 3,
+      "cart": []
     }
   ]
 }

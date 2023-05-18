@@ -17,9 +17,9 @@ export default function Products() {
       <div className="main-container">
         {products.map((e) => {
           return (
-            <>
-              <ProductCard key={e.id} product={e} eventHandler={eventHandler} />
-            </>
+            <div key={Math.floor(Math.random() * 100000)}>
+              <ProductCard product={e} eventHandler={eventHandler} />
+            </div>
           );
         })}
       </div>
