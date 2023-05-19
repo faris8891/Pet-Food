@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CartCard from "../Components/CartCard";
+import { Container, Col, Row, Stack } from "react-bootstrap";
 
 export default function Cart() {
   const [user, setuser] = useState({ cart: [""] });
@@ -19,32 +20,34 @@ export default function Cart() {
 
   return (
     <>
-      <div className="cart">
-        <div className="grid-item-1">
-          {cartItems.map((e) => {
-            return (
-              <li key={Math.floor(Math.random() * 1000)}>
-                {e.Name} Qty - {e.quantity}
-              </li>
-            );
-          })}
+      <Container>
+        <Row>
+          <Col sm={3}>
+            {cartItems.map((e) => {
+              return (
+                <li key={Math.floor(Math.random() * 1000)}>
+                  {e.Name} Qty - {e.quantity}
+                </li>
+              );
+            })}
+            <h2>Total Amount : {totalAmount}</h2>
+            <button>Place order</button>
+          </Col>
 
-          <h2>Total Amount : {totalAmount}</h2>
-          <button>Place order</button>
-        </div>
-        <div className="main-container">
           {cartItems.map((e) => {
             return (
               <div
                 key={Math.floor(Math.random() * 100)}
                 className="product-card-container "
               >
-                <CartCard product={e} />
+                <Col sm={8}>
+                  <CartCard product={e} />
+                </Col>
               </div>
             );
           })}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </>
   );
 }

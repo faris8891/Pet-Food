@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./Styles/App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Login from "./Pages/Login";
@@ -8,6 +9,7 @@ import NotFound from "./Pages/NotFound";
 import Navbar from "./Components/Navbar";
 import Cart from "./Pages/Cart";
 import { Auth } from "./Helpers/Auth";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
